@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contactvalidation.css">
+</head>
+<body>
+  <section class="section-inner">
+    <div class="section-title">Contact</div>
+    <form id="contact-form" method="POST" class="form">
+      <table class="contact">
+        <tr class="contact-line">
+          <td class="contact-sign"><label for="name">Name</label></td>
+          <td class="contact-input"><input id="name" name="name" type="text" class="contact-input"></td>
+        </tr>
+        <tr class="contact-line">
+          <td class="contact-sign"><label for="email">Email</label></td>
+          <td class="contact-input"><input id="email" name="email" type="email" class="contact-input"></td>
+        </tr>
+        <tr class="contact-line">
+          <td class="contact-sign"><label for="email-confirm">Email confirmation</label></td>
+          <td class="contact-input">
+            <input id="email-confirm" name="emailconfirm" type="email" class="contact-input">
+            <div id="email-error"></div>
+          </td>
+        </tr>
+        <tr class="contact-content">
+          <td class="contact-sign"><label for="content">Contents</label></td>
+          <td class="contact-input"><textarea id="content" name="content" class="contact-input"></textarea></td>
+        </tr>
+      </table>
+      <div class="contact-btn-area">
+        <button type="reset" class="contact-btn reset-btn">reset</button>
+        <button type="submit" class="contact-btn submit-btn">Send</button>
+      </div>
+    </form>
+  </section>
+  <script src="validation.js"></script>
+</body>
+</html>
