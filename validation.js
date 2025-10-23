@@ -1,24 +1,23 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const email = document.querySelector("#email");
-  const confirmEmail = document.querySelector("#confirmEmail");
-
-  // Create or select error message element
-  let errorMsg = document.createElement("p");
-  errorMsg.textContent = "Emails do not match";
-  errorMsg.style.color = "#d14539";
-  errorMsg.style.display = "none";
-  confirmEmail.insertAdjacentElement("afterend", errorMsg);
+document.addEventListener('DOMContentLoaded', function () {
+  const email = document.getElementById('email');
+  const emailConfirm = document.getElementById('email-confirm');
+  const errorDiv = document.getElementById('email-error');
 
   function validateEmails() {
-    if (email.value && confirmEmail.value && email.value !== confirmEmail.value) {
-      errorMsg.style.display = "block";
-      confirmEmail.style.backgroundColor = "rgba(230,169,171,.5)";
+    if (emailConfirm.value === "") {
+      errorDiv.textContent = '';
+      emailConfirm.classList.remove('input-error');
+      return;
+    }
+    if (email.value !== emailConfirm.value) {
+      errorDiv.innerHTML = '<span class="error-message">Email does not match</span>';
+      emailConfirm.classList.add('input-error');
     } else {
-      errorMsg.style.display = "none";
-      confirmEmail.style.backgroundColor = "";
+      errorDiv.textContent = '';
+      emailConfirm.classList.remove('input-error');
     }
   }
 
-  email.addEventListener("input", validateEmails);
-  confirmEmail.addEventListener("input", validateEmails);
+  email.addEventListener('input', validateEmails);
+  emailConfirm.addEventListener('input', validateEmails);
 });
