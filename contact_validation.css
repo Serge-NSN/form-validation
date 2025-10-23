@@ -1,0 +1,83 @@
+html {
+  height: 100 % ;
+}
+body {
+  position: relative;
+  padding - bottom: 75 px;
+  min - height: 100 % ;
+}
+.center {
+  text - align: center;
+}
+.section_inner {
+  padding: 50 px 10 % 30 px;
+}
+.section_title {
+  font - family: 'Noto Serif JP', serif;
+  text - align: center;
+  margin - bottom: 50 px;
+}
+.contact {
+  width: 100 % ;
+  margin - bottom: 30 px;
+}
+.contact_line {
+  height: 50 px;
+  line - height: 50 px;
+}
+.contact_sign {
+  width: 25 % ;
+  background: #beb9b7;
+  border: solid 1 px #beb9b7;
+  text - align: left;
+  padding: 0 20 px;
+}
+.contact_input {
+  width: 75 % ;
+  border: solid 1 px #beb9b7;
+}
+.contact_content {
+  height: 100 px;
+}
+.contact_input input, select, textarea {
+  border: none;
+  width: 99 % ;
+}
+.contact_input input, select {
+  height: 50 px;
+}
+.contact_input textarea {
+  height: 100 px;
+}
+.personal_information {
+  background: #e6e6e6;
+  padding: 10 px;
+  height: 100 px;
+  overflow: scroll;
+  margin - bottom: 20 px;
+}
+.contact_btn_area {
+  display: flex;
+  justify - content: center;
+  padding: 20 px 0;
+}
+.contact_btn {
+  padding: 10 px 20 px;
+  border: none;
+  border - radius: 5 px;
+}
+.contact_btn + .contact_btn {
+    margin - left: 10 px;
+  }
+  .submit_btn {
+    background: #9852a5;
+  color: # fff;
+  }
+  .reset_btn {
+    background: #e6e6e6;
+  }
+  .alert {
+    color: #fff;
+    padding: 20 px;
+    background: #d14539;
+  }
